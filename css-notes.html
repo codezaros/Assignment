@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Notes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      color: #333;
+      margin: 0;
+      padding: 2rem;
+    }
+    h1, h2, h3 {
+      color: #2c3e50;
+    }
+    pre {
+      background: #eee;
+      padding: 1rem;
+      overflow-x: auto;
+      border-radius: 5px;
+    }
+    code {
+      background: #e1e1e1;
+      padding: 0.2rem 0.4rem;
+      border-radius: 3px;
+      font-family: Consolas, monospace;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS Notes</h1>
+  <section>
+    <h2>What is CSS?</h2>
+    <p>CSS (Cascading Style Sheets) is used to style and layout web pages.</p>
+    <p>CSS can be applied in 3 ways:</p>
+    <ul>
+      <li><strong>Inline:</strong> Directly on the tag using <code>style</code> attribute</li>
+      <li><strong>Internal:</strong> Using &lt;style&gt; in the &lt;head&gt; tag</li>
+      <li><strong>External:</strong> Linking a .css file using &lt;link&gt; tag</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Selectors</h2>
+    <ul>
+      <li><code>*</code>: Universal selector</li>
+      <li><code>element</code>: Target all of one type (e.g., <code>p</code>)</li>
+      <li><code>.class</code>: Select by class name</li>
+      <li><code>#id</code>: Select by ID</li>
+      <li><code>element1 element2</code>: Select child elements inside parent</li>
+      <li><code>element:hover</code>: Pseudo-class (on hover)</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Colors</h2>
+    <ul>
+      <li>By name: <code>red</code>, <code>blue</code></li>
+      <li>Hex: <code>#ff0000</code></li>
+      <li>RGB: <code>rgb(255,0,0)</code></li>
+      <li>RGBA: <code>rgba(255,0,0,0.5)</code> (includes transparency)</li>
+      <li>HSL: <code>hsl(0, 100%, 50%)</code></li>
+    </ul>
+  </section>
+  <section>
+    <h2>Box Model</h2>
+    <ul>
+      <li><code>Content</code></li>
+      <li><code>Padding</code>: space inside border</li>
+      <li><code>Border</code>: edge around padding</li>
+      <li><code>Margin</code>: space outside border</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Units</h2>
+    <ul>
+      <li><strong>px</strong>: fixed pixels</li>
+      <li><strong>%</strong>: relative to parent</li>
+      <li><strong>em</strong>: relative to parent font-size</li>
+      <li><strong>rem</strong>: relative to root font-size</li>
+      <li><strong>vw</strong>: viewport width</li>
+      <li><strong>vh</strong>: viewport height</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Positioning</h2>
+    <ul>
+      <li><code>static</code> (default)</li>
+      <li><code>relative</code></li>
+      <li><code>absolute</code></li>
+      <li><code>fixed</code></li>
+      <li><code>sticky</code></li>
+    </ul>
+  </section>
+  <section>
+    <h2>Display</h2>
+    <ul>
+      <li><code>block</code>: takes full width</li>
+      <li><code>inline</code>: fits only as much as needed</li>
+      <li><code>inline-block</code></li>
+      <li><code>none</code>: hide element</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Flexbox</h2>
+    <ul>
+      <li><code>display: flex</code>: enables flex container</li>
+      <li><code>flex-direction</code>: row / column</li>
+      <li><code>justify-content</code>: horizontal alignment</li>
+      <li><code>align-items</code>: vertical alignment</li>
+      <li><code>gap</code>: spacing between items</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Grid</h2>
+    <ul>
+      <li><code>display: grid</code>: enables grid container</li>
+      <li><code>grid-template-columns</code>: define column layout</li>
+      <li><code>gap</code>: spacing between rows/columns</li>
+    </ul>
+  </section>
+</body>
+</html>

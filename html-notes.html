@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTML Notes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    h1, h2, h3 {
+      color: #2c3e50;
+    }
+    code {
+      background-color: #eee;
+      padding: 2px 5px;
+      border-radius: 4px;
+    }
+    pre {
+      background-color: #272822;
+      color: #f8f8f2;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+    }
+    th {
+      background-color: #eee;
+    }
+    ul {
+      list-style-type: square;
+    }
+    pre, code {
+      background-color: #1d1d1b;
+      color: #e6e6e6; /* brighter text */
+      padding: 1em;
+      border-radius: 10px;
+      display: block;
+      overflow-x: auto;
+      font-family: Consolas, monospace;
+      white-space: pre-wrap;
+      line-height: 1.5;
+    }
+
+  </style>
+</head>
+<body>
+  <h1>HTML Notes</h1>
+
+  <h2>Forms</h2>
+  <p>The <code>&lt;label&gt;</code> tag is used to define a label for input elements.</p>
+  <p>The <code>name</code> attribute groups similar inputs and sends data to the server.</p>
+  <p>The <code>value</code> attribute is what gets sent to the server.</p>
+  <p>The <code>&lt;div&gt;</code> tag is a container element.</p>
+
+  <h3>Username Box</h3>
+  <pre><code>&lt;div&gt;
+  &lt;label for="username"&gt;Enter Your username&lt;/label&gt;
+  &lt;input type="text" id="username" placeholder="Enter your username" autofocus&gt;
+&lt;/div&gt;</code></pre>
+
+  <h3>Radio Buttons</h3>
+  <pre><code>&lt;div&gt;
+  &lt;label for="male"&gt;Male&lt;/label&gt;
+  &lt;input type="radio" id="male" name="gender" value="male"&gt;
+
+  &lt;label for="female"&gt;Female&lt;/label&gt;
+  &lt;input type="radio" id="female" name="gender" value="female"&gt;
+&lt;/div&gt;</code></pre>
+
+  <h3>Checkbox</h3>
+  <pre><code>&lt;div&gt;
+  &lt;label for="subscribe"&gt;Subscribe to the newsletter&lt;/label&gt;
+  &lt;input type="checkbox" id="subscribe" name="subscribe" value="yes"&gt;
+&lt;/div&gt;</code></pre>
+
+  <h3>Textarea</h3>
+  <pre><code>&lt;div&gt;
+  &lt;label for="comment"&gt; Enter your comment&lt;/label&gt;
+  &lt;br&gt;
+  &lt;textarea id="comment" name="comment" rows="4" cols="50"&gt;&lt;/textarea&gt;
+&lt;/div&gt;</code></pre>
+
+  <h3>Dropdown Menu</h3>
+  <pre><code>&lt;div&gt;
+  &lt;select name="fruits"&gt;
+    &lt;option value="apple"&gt;apple&lt;/option&gt;
+    &lt;option value="banana"&gt;banana&lt;/option&gt;
+    &lt;option value="cherry"&gt;cherry&lt;/option&gt;
+  &lt;/select&gt;
+&lt;/div&gt;</code></pre>
+
+  <h2>Types of Elements</h2>
+  <ul>
+    <li><strong>Block Elements:</strong> Full width. e.g. <code>&lt;h1&gt;</code>, <code>&lt;div&gt;</code></li>
+    <li><strong>Inline Elements:</strong> Inline space only. e.g. <code>&lt;span&gt;</code>, <code>&lt;a&gt;</code></li>
+    <li><strong>Empty Elements:</strong> No content or closing tag. e.g. <code>&lt;br&gt;</code>, <code>&lt;input&gt;</code></li>
+  </ul>
+
+  <h2>ID and CLASS</h2>
+  <p><strong>ID:</strong> Unique identifier</p>
+  <pre><code>&lt;p id="intro"&gt;This is an Introduction&lt;/p&gt;</code></pre>
+  <p><strong>CLASS:</strong> Shared style identifier</p>
+  <pre><code>&lt;p class="highlight"&gt;This is a highlighted paragraph.&lt;/p&gt;
+&lt;p class="highlight"&gt;Another highlighted paragraph.&lt;/p&gt;</code></pre>
+
+  <h2>Video and Audio</h2>
+  <p><code>&lt;video src="" controls&gt;&lt;/video&gt;</code></p>
+  <ul>
+    <li>Attributes: src, controls, autoplay, muted, loop, poster, width, height</li>
+  </ul>
+  <p><code>&lt;audio src="" controls&gt;&lt;/audio&gt;</code></p>
+  <ul>
+    <li>Attributes: src, controls, autoplay, muted, preload</li>
+  </ul>
+
+  <h3>Preload Attribute Values</h3>
+  <table>
+    <tr><th>Value</th><th>Behavior</th><th>When to Use</th></tr>
+    <tr><td>auto</td><td>Loads full audio</td><td>When user likely to play</td></tr>
+    <tr><td>metadata</td><td>Loads duration, size</td><td>When you need info only</td></tr>
+    <tr><td>none</td><td>Loads nothing</td><td>Save bandwidth</td></tr>
+  </table>
+
+  <h2>SVG and iframe</h2>
+  <p><code>&lt;svg&gt;</code> creates scalable vector graphics.</p>
+  <p><code>&lt;iframe src="url" width="" height=""&gt;&lt;/iframe&gt;</code> embeds websites.</p>
+
+  <h2>Semantic HTML</h2>
+  <ul>
+    <li><code>&lt;header&gt;</code>: Top section</li>
+    <li><code>&lt;footer&gt;</code>: Bottom section</li>
+    <li><code>&lt;main&gt;</code>: Main content</li>
+    <li><code>&lt;article&gt;</code>: Self-contained content</li>
+    <li><code>&lt;figure&gt;</code> and <code>&lt;figcaption&gt;</code>: Images/diagrams with captions</li>
+    <li><code>&lt;nav&gt;</code>: Navigation menu</li>
+    <li><code>&lt;section&gt;</code>: Thematic content grouping</li>
+    <li><code>&lt;aside&gt;</code>: Sidebar</li>
+  </ul>
+
+  <h2>&lt;pre&gt; and &lt;code&gt; Tag</h2>
+  <p><code>&lt;pre&gt;</code>: Displays text with formatting (line breaks, spaces).</p>
+  <p><code>&lt;code&gt;</code>: Marks inline or block code.</p>
+
+  <h2>HTML Entities</h2>
+  <ul>
+    <li><code>&amp;lt;</code> — < </li>
+    <li><code>&amp;gt;</code> — > </li>
+    <li><code>&amp;amp;</code> — & </li>
+    <li><code>&amp;nbsp;</code> — non-breaking space</li>
+    <li><code>&amp;copy;</code> — ©</li>
+  </ul>
+
+  <h2>Quotation Tags</h2>
+  <ul>
+    <li><code>&lt;q&gt;</code>: Short inline quote</li>
+    <li><code>&lt;blockquote cite="url"&gt;</code>: Long block quote</li>
+  </ul>
+</body>
+</html>
